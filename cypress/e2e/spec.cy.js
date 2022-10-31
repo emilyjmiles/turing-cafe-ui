@@ -19,4 +19,23 @@ describe('Turing Cafe', () => {
     cy.get('[data-cy=single-card]').contains('button', 'Cancel');
   });
 
+  it('should be able to make a new reservation', () => {
+    cy.get('input[placeholder=name]').type('Emily');
+    cy.get('input[placeholder=date]').type('12/12');
+    cy.get('input[placeholder=time]').type('1:00');
+    cy.get('input[name=number]').type('4');
+    cy.get('[data-cy=form-section] > button').click();
+
+    cy.get('[data-cy=single-card]').should('have.length', 5);
+    cy.get('[data-cy=single-card]').contains('Emily');
+  });
+
+  it('should be able to cancel an exsisting reservation', () => {
+    cy.get('[data-cy=resy-cards] > :nth-child(1) > button').click();
+    cy.get('[data-cy=single-card]').should('have.length', 3);
+
+    cy.get('[data-cy=resy-cards] > :nth-child(3) > button').click();
+    cy.get('[data-cy=single-card]').should('have.length', 2);
+  });
+
 });
