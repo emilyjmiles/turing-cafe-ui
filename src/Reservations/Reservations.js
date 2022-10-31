@@ -18,7 +18,7 @@ const Reservations = ({ reservations, cancelReservation }) => {
   });
 
   return (
-    <section className='resy-cards'>
+    <section className='resy-cards' data-cy='resy-cards'>
       { resyCard }
     </section>
   );

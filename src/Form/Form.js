@@ -32,7 +32,7 @@ class Form extends Component {
 
   render() {
     return (
-      <form className="form-section">
+      <form className="form-section" data-cy='form-section'>
         <input
           type='text'
           placeholder="name"

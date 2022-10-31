@@ -3,7 +3,7 @@ import './Card.css';
 
 const Card = ({ id, name, date, time, number, cancelReservation }) => {
   return (
-    <section className="single-card">
+    <section className="single-card" data-cy='single-card'>
       <h2>{ name }</h2>
       <p>{ date }</p>
       <p>{ time } pm</p>

@@ -29,12 +29,12 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <h1 className='app-title'>Turing Cafe Reservations</h1>
-        <div className='resy-form'>
+      <div className="App" data-cy='App'>
+        <h1 className='app-title' data-cy='app-title'>Turing Cafe Reservations</h1>
+        <div className='resy-form' data-cy='resy-form'>
           <Form addReservation={ this.addReservation } />
         </div>
-        <div className='resy-container'>
+        <div className='resy-container' data-cy='resy-container'>
           <Reservations reservations={ this.state.reservations } cancelReservation={ this.cancelReservation } />
         </div>
       </div>
