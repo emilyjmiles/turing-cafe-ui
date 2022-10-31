@@ -49,6 +49,8 @@ Do not worry about making the POST request to the database yet.
 ### Iteration 3
 
 Now that the functionality is there for adding a reservation, write some tests:
+
+**Be sure to intercept and stub any userflows that rely on data from the API**
 * Write tests covering what should be displayed on the page when the user first visits.
 * Write a test that checks that when data is put into the form, the value is reflected in that form input.
 * Write a test to check the user flow of adding a new reservation to the page.
