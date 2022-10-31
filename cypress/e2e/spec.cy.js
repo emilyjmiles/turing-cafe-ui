@@ -26,4 +26,10 @@ describe('Turing Cafe', () => {
     cy.get('input[name=number]').type('4');
     cy.get('[data-cy=form-section] > button').click();
   });
+
+  it('should be able to cancel an exsisting reservation', () => {
+    cy.get('[data-cy=resy-cards] > :nth-child(1) > button').click();
+    cy.get('[data-cy=resy-cards] > :nth-child(3) > button').click();
+  });
+
 });
