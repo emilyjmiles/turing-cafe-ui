@@ -1,0 +1,8 @@
+.single-card {
+  background-color: #ffffffd9;
+  border: 5px solid teal;
+  border-radius: 10px;
+  width: 12vw;
+  padding: 1.25%;
+  margin: 1.25%;
+}
